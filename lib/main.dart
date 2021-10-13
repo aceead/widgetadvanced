@@ -36,12 +36,7 @@ class _MyHomePageState extends State<MyHomePage> {
       body: Center(
         //child: buildFlatButton(context),
         //child: CustomAppBar(),
-        child: RaisedButton(
-          child: Text('Click Me!'),
-          onPressed: () {
-            buildDialog(context);
-          },
-        ),
+        child: raisedButtonDialog(),
         //child: raisedButtonSnackBar(),
       ),
     );
@@ -72,6 +67,15 @@ class _MyHomePageState extends State<MyHomePage> {
       ),
     );
     _x.currentState.showSnackBar(sBar);
+  }
+
+  RaisedButton raisedButtonDialog() {
+    return RaisedButton(
+      child: Text('Click Me!'),
+      onPressed: () {
+        buildDialog(context);
+      },
+    );
   }
 
   void buildDialog(BuildContext context) {
