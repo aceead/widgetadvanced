@@ -42,7 +42,9 @@ class _MyHomePageState extends State<MyHomePage> {
         child: RaisedButton(
           child: Text('Show FlushBar'),
           onPressed: () {
-            Flushbar();
+            Flushbar(
+              title: 'Flushbar',
+            );
           },
         ),
       ),
