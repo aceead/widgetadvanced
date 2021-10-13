@@ -45,6 +45,10 @@ class _MyHomePageState extends State<MyHomePage> {
           child: Text('Show SnackBar'),
           onPressed: () {
             final sBar = SnackBar(
+              action: SnackBarAction(
+                label: 'Undo',
+                onPressed: () {},
+              ),
               content: Text('SnackBar'),
               duration: Duration(milliseconds: 6000),
               backgroundColor: Colors.blueAccent,
