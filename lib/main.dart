@@ -48,6 +48,7 @@ class _MyHomePageState extends State<MyHomePage> {
               action: SnackBarAction(
                 label: 'Undo',
                 onPressed: () {},
+                textColor: Colors.white,
               ),
               content: Text('SnackBar'),
               duration: Duration(milliseconds: 6000),
