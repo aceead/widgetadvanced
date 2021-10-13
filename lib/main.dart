@@ -55,7 +55,7 @@ class _MyHomePageState extends State<MyHomePage> {
               //message: 'This is flushbar message',
               messageText: Text('This is flushbar message',
                   style: TextStyle(
-                    color: Colors.cyanAccent,
+                    color: Colors.brown,
                     fontWeight: FontWeight.bold,
                   )),
               backgroundColor: Colors.lime,
