@@ -42,12 +42,12 @@ class _MyHomePageState extends State<MyHomePage> {
         //     buildDialog(context);
         //   },
         // ),
-        child: raisedButtonSnackBar(context),
+        child: raisedButtonSnackBar(),
       ),
     );
   }
 
-  RaisedButton raisedButtonSnackBar(BuildContext context) {
+  RaisedButton raisedButtonSnackBar() {
     RaisedButton(
       child: Text('Show SnackBar'),
       onPressed: () {
