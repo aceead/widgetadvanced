@@ -47,6 +47,9 @@ class _MyHomePageState extends State<MyHomePage> {
             final sBar = SnackBar(
               content: Text('SnackBar'),
               backgroundColor: Colors.cyan,
+              shape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.circular(30.0),
+              ),
             );
             _x.currentState.showSnackBar(sBar);
           },
