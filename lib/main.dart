@@ -45,7 +45,7 @@ class _MyHomePageState extends State<MyHomePage> {
             Flushbar(
               flushbarPosition: FlushbarPosition.TOP,
               mainButton: FlatButton(
-                child: Text('Undo', style: TextStyle(color: Colors.blue)),
+                child: Text('Close', style: TextStyle(color: Colors.blue)),
                 onPressed: () {},
               ),
               icon: Icon(
