@@ -23,9 +23,11 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
+  final _x = GlobalKey<ScaffoldState>();
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      key: _x,
       appBar: AppBar(
         title: Text("Wight Test"),
         centerTitle: true,
@@ -39,7 +41,16 @@ class _MyHomePageState extends State<MyHomePage> {
         //     buildDialog(context);
         //   },
         // ),
-        child: RaiseBotton(),
+        child: RaisedButton(
+          child: Text('Show SnackBar'),
+          onPressed: () {
+            final sBar = SnackBar(
+              content: Text('SnackBar'),
+              backgroundColor: Colors.cyan,
+            );
+            _x.currentState.showSnackBar(sBar);
+          },
+        ),
       ),
     );
   }
