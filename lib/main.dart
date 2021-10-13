@@ -36,13 +36,13 @@ class _MyHomePageState extends State<MyHomePage> {
       body: Center(
         //child: buildFlatButton(context),
         //child: CustomAppBar(),
-        // child: RaisedButton(
-        //   child: Text('Click Me!'),
-        //   onPressed: () {
-        //     buildDialog(context);
-        //   },
-        // ),
-        child: raisedButtonSnackBar(),
+        child: RaisedButton(
+          child: Text('Click Me!'),
+          onPressed: () {
+            buildDialog(context);
+          },
+        ),
+        //child: raisedButtonSnackBar(),
       ),
     );
   }
