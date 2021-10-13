@@ -24,12 +24,13 @@ class MyHomePage extends StatefulWidget {
 
 class _MyHomePageState extends State<MyHomePage> {
   final _x = GlobalKey<ScaffoldState>();
+  String titleText = "Wight Test";
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       key: _x,
       appBar: AppBar(
-        title: Text("Wight Test"),
+        title: Text(titleText),
         centerTitle: true,
       ),
       body: Center(
@@ -44,6 +45,9 @@ class _MyHomePageState extends State<MyHomePage> {
         child: RaisedButton(
           child: Text('Show SnackBar'),
           onPressed: () {
+            setState(() {
+              titleText = "Test";
+            });
             final sBar = SnackBar(
               action: SnackBarAction(
                 label: 'Undo',
