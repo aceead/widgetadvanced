@@ -39,13 +39,17 @@ class _MyHomePageState extends State<MyHomePage> {
         //child: CustomAppBar(),
         //child: raisedButtonDialog(),
         //child: raisedButtonSnackBar(),
-        child: RaisedButton(
-          child: Text('Show FlushBar'),
-          onPressed: () {
-            flushBarDemo();
-          },
-        ),
+        child: raisedButtonFlushBar(),
       ),
+    );
+  }
+
+  RaisedButton raisedButtonFlushBar() {
+    return RaisedButton(
+      child: Text('Show FlushBar'),
+      onPressed: () {
+        flushBarDemo();
+      },
     );
   }
 
