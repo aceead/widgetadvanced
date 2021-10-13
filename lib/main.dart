@@ -43,6 +43,10 @@ class _MyHomePageState extends State<MyHomePage> {
           child: Text('Show FlushBar'),
           onPressed: () {
             Flushbar(
+              mainButton: FlatButton(
+                child: Text('Undo'),
+                onPressed: () {},
+              ),
               icon: Icon(
                 Icons.access_alarm,
                 color: Colors.white,
