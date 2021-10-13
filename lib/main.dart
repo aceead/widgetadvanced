@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:toast/toast.dart';
+import 'package:flushbar/flushbar.dart';
 
 void main() => runApp(MyApp());
 
@@ -40,7 +41,9 @@ class _MyHomePageState extends State<MyHomePage> {
         //child: raisedButtonSnackBar(),
         child: RaisedButton(
           child: Text('Show FlushBar'),
-          onPressed: () {},
+          onPressed: () {
+            Flashbar();
+          },
         ),
       ),
     );
