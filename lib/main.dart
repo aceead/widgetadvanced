@@ -43,7 +43,10 @@ class _MyHomePageState extends State<MyHomePage> {
           child: Text('Show FlushBar'),
           onPressed: () {
             Flushbar(
-              icon: Icon(Icons.access_alarm, color: Colors.white),
+              icon: Icon(
+                Icons.access_alarm,
+                color: Colors.white,
+              ),
               title: 'Flushbar',
               //message: 'This is flushbar message',
               messageText: Text('This is flushbar message',
