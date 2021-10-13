@@ -42,19 +42,21 @@ class _MyHomePageState extends State<MyHomePage> {
         //     buildDialog(context);
         //   },
         // ),
-        child: raisedButtonSnackBar(context);
+        child: raisedButtonSnackBar(context),
       ),
     );
   }
-  RaisedButton raisedButtonSnackBar(BuildContext context){
+
+  RaisedButton raisedButtonSnackBar(BuildContext context) {
     RaisedButton(
-          child: Text('Show SnackBar'),
-          onPressed: () {
-            setState(() => titleText = "Test");
-            snackBarDemo();
-          },
-        );
+      child: Text('Show SnackBar'),
+      onPressed: () {
+        setState(() => titleText = "Test");
+        snackBarDemo();
+      },
+    );
   }
+
   void snackBarDemo() {
     final sBar = SnackBar(
       action: SnackBarAction(
