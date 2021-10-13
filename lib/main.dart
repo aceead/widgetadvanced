@@ -48,7 +48,7 @@ class _MyHomePageState extends State<MyHomePage> {
   }
 
   RaisedButton raisedButtonSnackBar() {
-    RaisedButton(
+    return RaisedButton(
       child: Text('Show SnackBar'),
       onPressed: () {
         setState(() => titleText = "Test");
