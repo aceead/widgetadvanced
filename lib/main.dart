@@ -45,6 +45,7 @@ class _MyHomePageState extends State<MyHomePage> {
             Flushbar(
               title: 'Flushbar',
               message: 'This is flushbar message',
+              backgroundColor: Colors.blueGrey,
             ).show(context);
           },
         ),
