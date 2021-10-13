@@ -46,24 +46,28 @@ class _MyHomePageState extends State<MyHomePage> {
           child: Text('Show SnackBar'),
           onPressed: () {
             setState(() => titleText = "Test");
-            final sBar = SnackBar(
-              action: SnackBarAction(
-                label: 'Undo',
-                onPressed: () => setState(() => titleText = "Wight Test"),
-                textColor: Colors.white,
-              ),
-              content: Text('SnackBar'),
-              duration: Duration(milliseconds: 6000),
-              backgroundColor: Colors.blueAccent,
-              shape: RoundedRectangleBorder(
-                borderRadius: BorderRadius.circular(20.0),
-              ),
-            );
-            _x.currentState.showSnackBar(sBar);
+            snackBarDemo();
           },
         ),
       ),
     );
+  }
+
+  void snackBarDemo() {
+    final sBar = SnackBar(
+      action: SnackBarAction(
+        label: 'Undo',
+        onPressed: () => setState(() => titleText = "Wight Test"),
+        textColor: Colors.white,
+      ),
+      content: Text('SnackBar'),
+      duration: Duration(milliseconds: 6000),
+      backgroundColor: Colors.blueAccent,
+      shape: RoundedRectangleBorder(
+        borderRadius: BorderRadius.circular(20.0),
+      ),
+    );
+    _x.currentState.showSnackBar(sBar);
   }
 
   void buildDialog(BuildContext context) {
