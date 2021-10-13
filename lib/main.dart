@@ -45,13 +45,11 @@ class _MyHomePageState extends State<MyHomePage> {
         child: RaisedButton(
           child: Text('Show SnackBar'),
           onPressed: () {
-            setState(() {
-              titleText = "Test";
-            });
+            setState(() => titleText = "Test");
             final sBar = SnackBar(
               action: SnackBarAction(
                 label: 'Undo',
-                onPressed: () {},
+                onPressed: () => setState(() => titleText = "Wight Test"),
                 textColor: Colors.white,
               ),
               content: Text('SnackBar'),
