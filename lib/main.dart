@@ -46,7 +46,9 @@ class _MyHomePageState extends State<MyHomePage> {
               flushbarPosition: FlushbarPosition.TOP,
               mainButton: FlatButton(
                 child: Text('Close', style: TextStyle(color: Colors.blue)),
-                onPressed: () {},
+                onPressed: () {
+                  Navigator.of(context).pop();
+                },
               ),
               icon: Icon(
                 Icons.access_alarm,
