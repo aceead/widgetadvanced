@@ -36,8 +36,9 @@ class _MyHomePageState extends State<MyHomePage> {
       body: Center(
         //child: buildFlatButton(context),
         //child: CustomAppBar(),
-        child: raisedButtonDialog(),
+        //child: raisedButtonDialog(),
         //child: raisedButtonSnackBar(),
+        child: null,
       ),
     );
   }
