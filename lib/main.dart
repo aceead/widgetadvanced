@@ -43,6 +43,7 @@ class _MyHomePageState extends State<MyHomePage> {
           child: Text('Show FlushBar'),
           onPressed: () {
             Flushbar(
+              duration: Duration(seconds: 3),
               flushbarPosition: FlushbarPosition.TOP,
               mainButton: FlatButton(
                 child: Text('Close', style: TextStyle(color: Colors.blue)),
