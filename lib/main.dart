@@ -46,6 +46,7 @@ class _MyHomePageState extends State<MyHomePage> {
           onPressed: () {
             final sBar = SnackBar(
               content: Text('SnackBar'),
+              duration: Duration(milliseconds: 8000),
               backgroundColor: Colors.blueAccent,
               shape: RoundedRectangleBorder(
                 borderRadius: BorderRadius.circular(20.0),
