@@ -38,7 +38,10 @@ class _MyHomePageState extends State<MyHomePage> {
         //child: CustomAppBar(),
         //child: raisedButtonDialog(),
         //child: raisedButtonSnackBar(),
-        child: null,
+        child: RaisedButton(
+          child: Text('Show FlushBar'),
+          onPressed: () {},
+        ),
       ),
     );
   }
@@ -72,7 +75,7 @@ class _MyHomePageState extends State<MyHomePage> {
 
   RaisedButton raisedButtonDialog() {
     return RaisedButton(
-      child: Text('Click Me!'),
+      child: Text('Show Dialog'),
       onPressed: () {
         buildDialog(context);
       },
