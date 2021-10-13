@@ -44,7 +44,8 @@ class _MyHomePageState extends State<MyHomePage> {
           onPressed: () {
             Flushbar(
               title: 'Flushbar',
-              message: 'This is flushbar message',
+              //message: 'This is flushbar message',
+              messageText: Text('This is flushbar message', style: TextStyle(color: Colors.cyanAccent)),
               backgroundColor: Colors.blueGrey,
             ).show(context);
           },
