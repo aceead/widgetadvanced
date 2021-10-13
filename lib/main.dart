@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:toast/toast.dart';
+import 'package:flushbar/flushbar.dart';
 
 void main() => runApp(MyApp());
 
@@ -23,24 +24,93 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
+  final _x = GlobalKey<ScaffoldState>();
+  String titleText = "Wight Test";
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      key: _x,
       appBar: AppBar(
-        title: Text("Wight Test"),
+        title: Text(titleText),
         centerTitle: true,
       ),
       body: Center(
-        //child: buildFlatButton(context),
-        //child: CustomAppBar(),
-        // child: RaisedButton(
-        //   child: Text('Click Me!'),
-        //   onPressed: () {
-        //     buildDialog(context);
-        //   },
-        // ),
-        child: null,
+          //child: buildFlatButton(context),
+          //child: CustomAppBar(),
+          //child: raisedButtonDialog(),
+          //child: raisedButtonSnackBar(),
+          //child: raisedButtonFlushBar(),
+          ),
+    );
+  }
+
+  RaisedButton raisedButtonFlushBar() {
+    return RaisedButton(
+      child: Text('Show FlushBar'),
+      onPressed: () {
+        flushBarDemo();
+      },
+    );
+  }
+
+  void flushBarDemo() {
+    Flushbar(
+      duration: Duration(seconds: 3),
+      flushbarPosition: FlushbarPosition.TOP,
+      mainButton: FlatButton(
+        child: Text('Close', style: TextStyle(color: Colors.blue)),
+        onPressed: () {
+          Navigator.of(context).pop();
+        },
       ),
+      icon: Icon(
+        Icons.access_alarm,
+        color: Colors.white,
+      ),
+      title: 'Flushbar',
+      //message: 'This is flushbar message',
+      messageText: Text('This is flushbar message',
+          style: TextStyle(
+            color: Colors.amberAccent,
+            fontWeight: FontWeight.bold,
+          )),
+      backgroundColor: Colors.purpleAccent,
+    ).show(context);
+  }
+
+  RaisedButton raisedButtonSnackBar() {
+    return RaisedButton(
+      child: Text('Show SnackBar'),
+      onPressed: () {
+        setState(() => titleText = "Test");
+        snackBarDemo();
+      },
+    );
+  }
+
+  void snackBarDemo() {
+    final sBar = SnackBar(
+      action: SnackBarAction(
+        label: 'Undo',
+        onPressed: () => setState(() => titleText = "Wight Test"),
+        textColor: Colors.white,
+      ),
+      content: Text('SnackBar'),
+      duration: Duration(milliseconds: 6000),
+      backgroundColor: Colors.blueAccent,
+      shape: RoundedRectangleBorder(
+        borderRadius: BorderRadius.circular(20.0),
+      ),
+    );
+    _x.currentState.showSnackBar(sBar);
+  }
+
+  RaisedButton raisedButtonDialog() {
+    return RaisedButton(
+      child: Text('Show Dialog'),
+      onPressed: () {
+        buildDialog(context);
+      },
     );
   }
 
