@@ -42,32 +42,36 @@ class _MyHomePageState extends State<MyHomePage> {
         child: RaisedButton(
           child: Text('Show FlushBar'),
           onPressed: () {
-            Flushbar(
-              duration: Duration(seconds: 3),
-              flushbarPosition: FlushbarPosition.TOP,
-              mainButton: FlatButton(
-                child: Text('Close', style: TextStyle(color: Colors.blue)),
-                onPressed: () {
-                  Navigator.of(context).pop();
-                },
-              ),
-              icon: Icon(
-                Icons.access_alarm,
-                color: Colors.white,
-              ),
-              title: 'Flushbar',
-              //message: 'This is flushbar message',
-              messageText: Text('This is flushbar message',
-                  style: TextStyle(
-                    color: Colors.amberAccent,
-                    fontWeight: FontWeight.bold,
-                  )),
-              backgroundColor: Colors.purpleAccent,
-            ).show(context);
+            flushBarDemo();
           },
         ),
       ),
     );
+  }
+
+  void flushBarDemo() {
+    Flushbar(
+      duration: Duration(seconds: 3),
+      flushbarPosition: FlushbarPosition.TOP,
+      mainButton: FlatButton(
+        child: Text('Close', style: TextStyle(color: Colors.blue)),
+        onPressed: () {
+          Navigator.of(context).pop();
+        },
+      ),
+      icon: Icon(
+        Icons.access_alarm,
+        color: Colors.white,
+      ),
+      title: 'Flushbar',
+      //message: 'This is flushbar message',
+      messageText: Text('This is flushbar message',
+          style: TextStyle(
+            color: Colors.amberAccent,
+            fontWeight: FontWeight.bold,
+          )),
+      backgroundColor: Colors.purpleAccent,
+    ).show(context);
   }
 
   RaisedButton raisedButtonSnackBar() {
